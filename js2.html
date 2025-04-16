@@ -9,35 +9,32 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
 
-function validasi()
-            {
-                var nrp= document.getElementById("nrp").value;
-                var nama= document.getElementById("nama").value;
-                
-                if (nrp.length == 0){
-                    //alert ("NRP harus diisi");
-                    swal("Pesan", "NRP harus diisi", "error");
-                    document.getElementById("nrp").focus();
-                    return false;
-                }
+        function validasi() {
+            var nrp = document.getElementById("nrp").value;
+            var nama = document.getElementById("nama").value;
 
-                if (nama.length ==0){
-                    //alert ("Nama harus diisi");
-                    swal("Pesan", "Nama harus diisi", "error");
-                    document.getElementById("nama").focus();
-                    return false;
-
-                }
-
-                if(isNaN(nrp)){
-                    swal("Pesan", "NRP harus angka", "error");
-                    document.getElementById("nrp").focus();
-                    return false;
-                }
-                
-                // default return true
-
+            if (nrp.length == 0) {
+                swal("Pesan", "NRP harus diisi", "error");
+                document.getElementById("nrp").focus();
+                return false;
             }
+
+            if (nama.length == 0) {
+                swal("Pesan","Nama harus diisi", "error");
+                document.getElementById("nama").focus();
+                return false;
+            }
+
+            if (isNaN(nrp)) {
+                //alert("NRP harus diisi");
+                swal("Pesan", "NRP harus angka", "error");
+                document.getElementById("nrp").focus();
+                return false;
+            }
+
+            
+            //defaultnya return true
+        }
         
     </script>
 
